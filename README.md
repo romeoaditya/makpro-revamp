@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# 🚀 MAK Production - Creative Digital Agency Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MAK Production adalah platform web resmi untuk agensi digital kreatif yang berfokus pada transformasi visi menjadi realitas digital. Project ini dibangun dengan fokus pada **Pixel-Perfect Design**, performa tinggi, dan pengalaman pengguna yang mulus.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## React Compiler
+Project ini dikembangkan menggunakan teknologi industri terbaru:
+* **Frontend:** React 18 (Vite)
+* **Language:** TypeScript untuk *type-safety*
+* **Styling:** Tailwind CSS (Modern Utility-First CSS)
+* **Routing:** React Router DOM untuk navigasi 10+ halaman
+* **Animations:** Tailwind Custom Keyframes & Framer Motion
+* **Icons:** Lucide React & React Icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Fitur Utama
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Website ini mencakup seluruh kebutuhan branding agensi, diantaranya:
+* **Modern Hero Section:** Dilengkapi dengan *floating badges* dan desain responsif.
+* **Service Showcase:** Penjelasan layanan (Video, Design, Web, dkk) dengan daftar *software* yang digunakan.
+* **Portfolio System:** Galeri project dengan sistem filter kategori dan halaman detail yang dinamis.
+* **Client Marquee:** Animasi logo klien yang berjalan berlawanan arah secara otomatis.
+* **Interactive FAQ:** Sistem *accordion* untuk tanya jawab yang rapi.
+* **Contact Form:** Formulir kontak fungsional dengan validasi input.
+* **Pixel Perfect UI:** Implementasi desain Figma yang sangat presisi hingga ke detail terkecil.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📂 Struktur Folder
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```text
+src/
+├── assets/      # Image, Logo, Icon (Export dari Figma)
+├── components/  # Reusable UI (Button, Card, Accordion)
+├── layouts/     # MainLayout (Navbar & Footer tetap)
+├── pages/       # Home, About, Services, Portfolio, Clients, Contact
+├── routes/      # Konfigurasi AppRouter
+└── theme/       # Konfigurasi Tailwind & Global CSS
