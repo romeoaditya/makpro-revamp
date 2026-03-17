@@ -35,7 +35,7 @@ export default function FilterSidebar({
         onClick={onToggleCategoryOpen}
         className="flex items-center justify-between w-full mb-2 px-2.5 py-2 hover:bg-neutral-50 rounded-lg transition-colors"
       >
-        <span className="text-black/80 text-sm font-semibold">Category</span>
+        <span className="text-black/80 text-sm font-semibold">Kategori</span>
         <Icon
           icon="mdi:chevron-down"
           width={20}
@@ -78,7 +78,7 @@ export default function FilterSidebar({
         onClick={onClearFilter}
         className="px-4 py-2 rounded-md border border-black/20 text-zinc-800 text-sm font-semibold hover:bg-neutral-50 transition-colors"
       >
-        Clear type
+        Hapus Filter
       </button>
     </div>
   );

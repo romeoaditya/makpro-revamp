@@ -6,22 +6,22 @@ const servicesPreview = [
   {
     icon: "solar:videocamera-record-bold",
     title: "Videography",
-    desc: "Professional video & photo services to make your brand stand out.",
+    desc: "Layanan video & foto profesional untuk membuat brand Anda menonjol.",
   },
   {
     icon: "iconoir:design-nib-solid",
     title: "Graphic Design",
-    desc: "Visual identities and brand designs that speak your brand language.",
+    desc: "Identitas visual dan desain brand yang berbicara dalam bahasa brand Anda.",
   },
   {
     icon: "streamline:web-remix",
     title: "Web Development",
-    desc: "Smart, responsive, and modern websites tailored to your needs.",
+    desc: "Website cerdas, responsif, dan modern yang disesuaikan dengan kebutuhan Anda.",
   },
   {
     icon: "fe:vr",
     title: "Virtual Reality",
-    desc: "Immersive VR experiences that enhance your business engagement.",
+    desc: "Pengalaman VR imersif yang meningkatkan keterlibatan bisnis Anda.",
   },
 ];
 
@@ -34,18 +34,18 @@ export default function ServicesPreview() {
           <div>
             <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-[50px] mb-4">
               <span className="text-red-700 text-[10px] font-bold tracking-wider uppercase">
-                OUR SERVICES
+                LAYANAN KAMI
               </span>
             </div>
             <h2 className="text-3xl lg:text-[42px] font-extrabold leading-[1.3] text-black">
-              What We <span className="text-red-700">Offer.</span>
+              Apa Yang Kami <span className="text-red-700">Tawarkan.</span>
             </h2>
           </div>
           <Link
             to="/services"
             className="flex items-center gap-2 text-red-700 text-sm font-semibold hover:gap-3 transition-all"
           >
-            View All Services <ArrowRight size={16} />
+            Lihat Semua Layanan <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -75,7 +75,7 @@ export default function ServicesPreview() {
                   </p>
                 </div>
                 <div className="hidden lg:flex items-center gap-1.5 text-red-700 text-xs font-semibold opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                  Learn More <ArrowRight size={12} />
+                  Pelajari Lebih Lanjut <ArrowRight size={12} />
                 </div>
               </div>
             </Link>

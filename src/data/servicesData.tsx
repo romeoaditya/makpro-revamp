@@ -36,21 +36,21 @@ export interface ServiceItem {
 
 export const servicesData: ServiceItem[] = [
   {
-    title: "Videography",
+    title: "Videografi",
     description: (
       <>
-        <strong>Visual Storytelling that Inspires and Connects</strong>
+        <strong>Storytelling Visual yang Menginspirasi dan Terhubung</strong>
         <br />
-        MAK Production provides professional video and photo services to help
-        your business stand out across every platform.
+        MAK Production menyediakan layanan video dan foto profesional untuk
+        membantu bisnis Anda tampil menonjol di berbagai platform.
       </>
     ),
     image: ImgVideography,
     howWeHelp: [
-      "Company Profile Video",
-      "Event Documentation",
-      "Commercial & Product Video",
-      "Photography Services",
+      "Video Profil Perusahaan",
+      "Dokumentasi Acara",
+      "Video Komersial & Produk",
+      "Layanan Fotografi",
     ],
     software: [
       { icon: IconPr, name: "Adobe Premiere Pro" },
@@ -59,21 +59,21 @@ export const servicesData: ServiceItem[] = [
     ],
   },
   {
-    title: "Graphic Design",
+    title: "Desain Grafis",
     description: (
       <>
-        <strong>Crafting Visual Identities that Speak Your Brand</strong>
+        <strong>Menciptakan Identitas Visual yang Mewakili Brand Anda</strong>
         <br />
-        If you're looking to build a beautiful, functional, and memorable brand
-        from scratch, our team delivers results beyond expectations.
+        Jika Anda ingin membangun brand yang menarik, fungsional, dan mudah
+        diingat, tim kami siap memberikan hasil terbaik.
       </>
     ),
     image: ImgGraphicDesign,
     howWeHelp: [
-      "Logo & Brand Identity",
-      "Print & Digital Design",
-      "Marketing Collateral",
-      "Packaging Design",
+      "Logo & Identitas Brand",
+      "Desain Cetak & Digital",
+      "Materi Pemasaran",
+      "Desain Kemasan",
     ],
     software: [
       { icon: IconPs, name: "Adobe Photoshop" },
@@ -86,18 +86,19 @@ export const servicesData: ServiceItem[] = [
     title: "Motion Graphic",
     description: (
       <>
-        <strong>Turning Ideas into Engaging Motion Experiences</strong>
+        <strong>Mengubah Ide Menjadi Animasi yang Menarik</strong>
         <br />
-        We create high-quality animations from script and storyboard to final
-        visuals, bringing your message to life in a unique and memorable way.
+        Kami membuat animasi berkualitas tinggi mulai dari konsep dan storyboard
+        hingga visual akhir untuk menyampaikan pesan Anda secara unik dan
+        berkesan.
       </>
     ),
     image: ImgMotionGraphic,
     howWeHelp: [
-      "Explainer Video",
-      "2D/3D Motion Design",
-      "Brand Animation",
-      "Infographic Animation",
+      "Video Penjelasan (Explainer)",
+      "Desain Motion 2D/3D",
+      "Animasi Brand",
+      "Animasi Infografis",
     ],
     software: [
       { icon: IconAe, name: "Adobe After Effects" },
@@ -107,21 +108,21 @@ export const servicesData: ServiceItem[] = [
     ],
   },
   {
-    title: "Web Development",
+    title: "Pengembangan Web",
     description: (
       <>
-        <strong>Building Smart, Responsive, and Modern Websites</strong>
+        <strong>Membangun Website Modern, Responsif, dan Berkualitas</strong>
         <br />
-        We are committed to delivering professional websites with stunning
-        designs, great performance, and features that match your business needs.
+        Kami berkomitmen menghadirkan website profesional dengan desain menarik,
+        performa optimal, serta fitur yang sesuai dengan kebutuhan bisnis Anda.
       </>
     ),
     image: ImgWebDev,
     howWeHelp: [
-      "Corporate Website",
-      "Landing Page Design",
-      "E-Commerce Development",
-      "Maintenance & Optimization",
+      "Website Perusahaan",
+      "Desain Landing Page",
+      "Pengembangan E-Commerce",
+      "Maintenance & Optimasi",
     ],
     software: [
       { icon: IconVscode, name: "VS Code" },
@@ -131,22 +132,22 @@ export const servicesData: ServiceItem[] = [
     ],
   },
   {
-    title: "Virtual Reality",
+    title: "Realitas Virtual",
     description: (
       <>
-        <strong>Immersive Virtual Experiences for Business Growth</strong>
+        <strong>Pengalaman Virtual Imersif untuk Pertumbuhan Bisnis</strong>
         <br />
-        MAK Pro is dedicated to developing content and utilizing VR technology
-        to deliver interactive experiences that enhance your business
-        engagement.
+        MAK Pro berfokus pada pengembangan konten dan pemanfaatan teknologi VR
+        untuk menghadirkan pengalaman interaktif yang meningkatkan engagement
+        bisnis Anda.
       </>
     ),
     image: ImgVr,
     howWeHelp: [
-      "Virtual Tour Creation",
-      "VR Training Experience",
-      "Product Simulation",
-      "Interactive 3D Showcase",
+      "Pembuatan Virtual Tour",
+      "Pelatihan Berbasis VR",
+      "Simulasi Produk",
+      "Showcase 3D Interaktif",
     ],
     software: [
       { icon: IconUe, name: "Unreal Engine" },

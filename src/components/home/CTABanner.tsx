@@ -38,12 +38,13 @@ export default function CTABanner() {
           {/* Text */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left z-10">
             <h2 className="text-3xl lg:text-[42px] font-extrabold leading-[1.3] text-white mb-4">
-              Ready to Start Your <br className="hidden lg:block" />
-              Next Project?
+              Siap Memulai <br className="hidden lg:block" />
+              Proyek Selanjutnya?
             </h2>
             <p className="text-white/80 text-sm leading-relaxed max-w-md">
-              Let's work together to bring your vision to life. Contact us today
-              and let our team craft the perfect digital solution for you.
+              Mari bekerja sama untuk mewujudkan visi Anda. Hubungi kami hari
+              ini dan biarkan tim kami merancang solusi digital yang sempurna
+              untuk Anda.
             </p>
           </div>
 
@@ -53,13 +54,13 @@ export default function CTABanner() {
               to="/contact"
               className="px-8 py-3.5 bg-white text-red-700 rounded-full text-sm font-bold hover:bg-neutral-100 hover:scale-105 active:scale-95 transition-all shadow-lg whitespace-nowrap"
             >
-              Get Started Now
+              Mulai Sekarang
             </Link>
             <Link
               to="/portofolio"
               className="px-8 py-3.5 rounded-full border-2 border-white text-white text-sm font-bold hover:bg-white/10 hover:scale-105 active:scale-95 transition-all whitespace-nowrap flex items-center gap-2"
             >
-              View Our Work <ArrowRight size={16} />
+              Lihat Proyek Kami <ArrowRight size={16} />
             </Link>
           </div>
         </div>

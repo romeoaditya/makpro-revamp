@@ -19,7 +19,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
           >
             <span className="text-red-700 text-[10px] font-bold tracking-wider uppercase">
-              OUR SERVICES
+              LAYANAN KAMI
             </span>
           </motion.div>
 
@@ -29,13 +29,13 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
           >
-            Ready to provide our{" "}
+            Siap Memberikan{" "}
             <span className="text-red-700">
-              best
+              Layanan
               <br className="hidden md:block" />
-              service
+              Terbaik
             </span>{" "}
-            for you.
+            untuk Anda.
           </motion.h2>
         </div>
 

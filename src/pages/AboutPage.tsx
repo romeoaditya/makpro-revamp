@@ -1,14 +1,16 @@
 // AboutPage.tsx
 import { Icon } from "@iconify/react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import AboutImages from "../components/about/AboutImages";
 import AboutFeatures from "../components/about/AboutFeatures";
 import CompanyProfileModal from "../components/CompanyProfileModal";
 import { useState } from "react";
 import { contactData } from "../data/aboutData";
+import VisiMisi from "../components/about/VisiMisi";
 
 export default function AboutPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <section className="w-full bg-white overflow-hidden py-16 lg:py-24">
@@ -32,7 +34,7 @@ export default function AboutPage() {
               className="inline-flex items-center px-4 py-2 bg-red-50 rounded-[50px] mb-5"
             >
               <span className="text-red-700 text-[10px] font-bold tracking-wider uppercase">
-                ABOUT US
+                TENTANG KAMI
               </span>
             </motion.div>
 
@@ -42,21 +44,72 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             >
-              Our Creative Team <br className="hidden lg:block" />
-              <span className="text-red-700">Inspires Your Vision.</span>
+              Tim Kreatif Kami <br className="hidden lg:block" />
+              <span className="text-red-700">Menghidupkan Visi Anda.</span>
             </motion.h2>
 
-            <motion.p
-              className="text-sm md:text-[15px] font-normal text-neutral-700 leading-relaxed mb-10 w-full xl:max-w-[90%]"
+            {/* Description dengan Lihat Selengkapnya */}
+            <motion.div
+              className="mb-10 w-full xl:max-w-[90%]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             >
-              We're a passionate team from MAK Production, dedicated to bringing
-              creative ideas to life from visual design to digital storytelling.
-              We help brands connect with audiences through innovation and
-              collaboration.
-            </motion.p>
+              <div className="relative">
+                <motion.div
+                  animate={{ height: isExpanded ? "auto" : "4.5rem" }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="text-sm md:text-[15px] font-normal text-neutral-700 leading-relaxed">
+                    MAK Production merupakan Digital Agency yang menghadirkan
+                    solusi kreatif di bidang Photography, Videography, Graphic
+                    Design, dan Motion Graphic. Kami percaya bahwa setiap brand
+                    dan individu memiliki visi unik, dan kami hadir untuk
+                    mewujudkannya melalui karya visual yang berkualitas dan
+                    berdampak.
+                    <br />
+                    <br />
+                    Sesuai dengan slogan kami,{" "}
+                    <span className="font-bold">
+                      "Our Talent for Your Dreams"
+                    </span>
+                    , kami menggabungkan kreativitas, teknologi, dan strategi
+                    untuk menghadirkan hasil terbaik sesuai dengan kebutuhan dan
+                    tujuan klien. Dengan tim profesional dan komitmen tinggi,
+                    kami siap menjadi mitra dalam setiap langkah perjalanan
+                    kreatif Anda.
+                  </p>
+                </motion.div>
+
+                {/* Fade gradient saat collapsed */}
+                <AnimatePresence>
+                  {!isExpanded && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none"
+                    />
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="mt-2 text-sm font-semibold text-red-700 hover:text-red-900 transition-colors duration-200 flex items-center gap-1 mx-auto lg:mx-0"
+              >
+                {isExpanded ? "Lebih sedikit" : "Lihat selengkapnya"}
+                <motion.span
+                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="inline-block"
+                >
+                  <Icon icon="mdi:chevron-down" width={18} height={18} />
+                </motion.span>
+              </button>
+            </motion.div>
 
             <motion.div
               className="w-full"
@@ -118,6 +171,7 @@ export default function AboutPage() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+      <VisiMisi />
     </section>
   );
 }

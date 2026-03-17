@@ -61,7 +61,7 @@ export default function ClientsPage() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
             >
               <span className="text-red-700 text-[10px] font-medium tracking-wider uppercase">
-                CLIENTS & PARTNERS
+                KLIEN & MITRA
               </span>
             </motion.div>
 
@@ -71,9 +71,9 @@ export default function ClientsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
             >
-              Collaborating With <br />
+              Bekerja Sama Dengan <br />
               <span className="text-red-700">
-                Forward-Thinking <br /> Clients
+                Klien Visioner <br /> dan Inovatif
               </span>
             </motion.h1>
 
@@ -83,8 +83,8 @@ export default function ClientsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.25 }}
             >
-              We work with visionary clients to build impactful and <br />
-              high-quality digital experiences.
+              Kami bekerja sama dengan klien visioner untuk menciptakan
+              pengalaman digital yang berdampak dan berkualitas tinggi.
             </motion.p>
           </div>
 
@@ -127,7 +127,7 @@ export default function ClientsPage() {
 
           <div className="flex-1">
             <h3 className="text-zinc-800 text-sm font-semibold mb-4">
-              Client Showcase
+              Daftar Klien
             </h3>
             <div className="w-full h-px bg-black/10 mb-6" />
 
@@ -163,7 +163,7 @@ export default function ClientsPage() {
 
             {filteredClients.length === 0 && (
               <div className="flex items-center justify-center h-40 text-neutral-400 text-sm">
-                No clients found for selected category.
+                Tidak ada klien pada kategori yang dipilih.
               </div>
             )}
           </div>

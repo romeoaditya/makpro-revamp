@@ -28,7 +28,7 @@ export default function HeroSection() {
             >
               <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white rounded-[50px] shadow-[0px_6px_15px_0px_rgba(0,0,0,0.10)] mb-8">
                 <span className="text-red-700 text-xs font-medium">
-                  Fuel Your Digital Journey!
+                  Wujudkan Perjalanan Digital Anda!
                 </span>
                 <Zap size={18} className="text-red-700 fill-red-700" />
               </div>
@@ -40,8 +40,8 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
             >
-              Transforming Your Visions into{" "}
-              <span className="text-red-700">Digital Reality.</span>
+              Wujudkan Visi Anda Menjadi{" "}
+              <span className="text-red-700">Realitas Digital.</span>
             </motion.h1>
 
             <motion.p
@@ -50,8 +50,9 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.25 }}
             >
-              We bring your ideas to life through creativity, innovation, and
-              technology turning concepts into stunning digital experiences.
+              Kami mewujudkan ide Anda melalui kreativitas, inovasi, dan
+              teknologi, mengubah konsep menjadi pengalaman digital yang
+              menarik.
             </motion.p>
 
             <motion.div
@@ -64,13 +65,13 @@ export default function HeroSection() {
                 to="/contact"
                 className="flex-1 sm:flex-none px-6 py-3 bg-red-700 rounded-[50px] shadow-[0px_8px_20px_0px_rgba(0,0,0,0.25)] text-white text-sm font-semibold text-center hover:bg-red-800 hover:scale-105 transition-all duration-200"
               >
-                Get Started
+                Mulai Sekarang
               </Link>
               <Link
                 to="/portofolio"
                 className="flex-1 sm:flex-none px-6 py-3 rounded-[50px] border border-red-700 text-red-700 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-red-50 hover:scale-105 transition-all duration-200"
               >
-                View More <ArrowRight size={16} />
+                Lihat Selengkapnya <ArrowRight size={16} />
               </Link>
             </motion.div>
           </div>

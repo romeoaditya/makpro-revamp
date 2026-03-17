@@ -36,7 +36,7 @@ export default function FAQPage() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
           >
             <span className="text-red-700 text-[10px] font-medium tracking-wider uppercase">
-              FAQ
+              PERTANYAAN
             </span>
           </motion.div>
 
@@ -46,8 +46,8 @@ export default function FAQPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
           >
-            Frequently Asked <br />
-            <span className="text-red-700">Questions</span>
+            Pertanyaan Yang <br />
+            <span className="text-red-700">Sering Diajukan</span>
           </motion.h1>
         </div>
 
@@ -84,7 +84,7 @@ export default function FAQPage() {
 
             <div className="flex items-center justify-end gap-4 mt-2">
               <span className="text-red-700 text-sm font-normal">
-                Show others
+                Tampilkan Lainnya
               </span>
               <div className="flex items-center gap-4">
                 <button

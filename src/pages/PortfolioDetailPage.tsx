@@ -2,31 +2,36 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolioData";
-import MockupImage from "../assets/portofolio/mockup-demo.png";
-import FullPreviewImage from "../assets/portofolio/full-demo.png";
+import LaptopMockup from "../components/portfolio/LaptopMockup";
 
 type Project = (typeof portfolioData)[number];
 
-const specItems = (project: Project | undefined) => [
-  { icon: "mynaui:user-solid", label: "Client", value: project?.client },
+const specItems = (project: Project) => [
+  { icon: "mynaui:user-solid", label: "Klien", value: project.client },
   {
     icon: "material-symbols:devices",
     label: "Platform",
-    value: project?.platform,
+    value: project.platform,
   },
   {
     icon: "bitcoin-icons:calendar-filled",
-    label: "Created On",
-    value: project?.date,
+    label: "Tanggal",
+    value: project.date,
   },
-  { icon: "tabler:world", label: "Website", value: project?.website },
+  { icon: "tabler:world", label: "Website", value: project.website },
   {
     icon: "material-symbols:category-rounded",
-    label: "Project",
-    value: "UI/UX Design, Development",
+    label: "Jenis Project",
+    value: project.title,
   },
-  { icon: "mdi:tools", label: "Tools", value: project?.tools },
+  { icon: "mdi:tools", label: "Tools", value: project.tools },
 ];
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, delay },
+});
 
 export default function PortfolioDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -45,50 +50,48 @@ export default function PortfolioDetailPage() {
           {/* LEFT */}
           <div className="flex flex-col">
             <motion.div
+              {...fadeUp(0)}
               className="inline-flex items-center px-4 py-2 bg-red-50 rounded-[50px] mb-5 self-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
             >
               <span className="text-red-700 text-[10px] font-bold uppercase tracking-wider">
-                DETAIL PROJECT
+                DETAIL PROYEK
               </span>
             </motion.div>
 
             <motion.h1
+              {...fadeUp(0.1)}
               className="text-3xl md:text-5xl font-bold leading-[1.2] text-black mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
             >
               <span className="text-red-700">
-                {project.title?.split(" ")[0] || ""}
+                {project.title?.split(" ")[0]}
               </span>{" "}
-              <span>{project.title?.split(" ").slice(1).join(" ") || ""}</span>
+              <span>{project.title?.split(" ").slice(1).join(" ")}</span>
             </motion.h1>
 
             <motion.p
+              {...fadeUp(0.2)}
               className="text-sm md:text-base text-black/80 leading-relaxed mb-12 xl:max-w-[85%]"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
             >
               {project.desc}
             </motion.p>
 
-            {/* SPEC */}
+            {/* SPEK */}
             <motion.div
+              {...fadeUp(0.3)}
               className="grid grid-cols-2 gap-y-6 gap-x-8 mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
             >
               {specItems(project).map((spec, i) => (
                 <div key={i} className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center text-red-600">
+                  <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center text-red-600 shrink-0">
                     <Icon icon={spec.icon} width={22} height={22} />
                   </div>
                   <div>
-                    <span className="text-black text-xs font-semibold block">
+                    <span className="text-black text-xs font-semibold block mb-0.5">
                       {spec.label}
                     </span>
-                    <span className="text-black/80 text-sm">{spec.value}</span>
+                    <span className="text-black/70 text-sm leading-relaxed">
+                      {spec.value ?? "-"}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -96,32 +99,33 @@ export default function PortfolioDetailPage() {
 
             {/* BUTTON */}
             <motion.div
+              {...fadeUp(0.4)}
               className="flex flex-row items-center gap-3 sm:gap-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
             >
-              {/* ✅ FIX UTAMA DI SINI */}
               <a
                 href={
-                  project.website !== "-" &&
-                  !project.website?.startsWith("http")
-                    ? `https://${project.website}`
-                    : project.website !== "-"
+                  project.website && project.website !== "-"
+                    ? project.website.startsWith("http")
                       ? project.website
-                      : "#"
+                      : `https://${project.website}`
+                    : "#"
                 }
                 target="_blank"
                 rel="noreferrer"
-                className="flex-1 sm:flex-none px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-red-700 to-red-900 rounded-full shadow-[0px_8px_20px_rgba(226,29,29,0.3)] text-white text-sm font-semibold flex justify-center items-center hover:scale-105 active:scale-95 transition-all"
+                className={`flex-1 sm:flex-none px-6 py-3 bg-red-700 rounded-full text-white text-sm font-semibold flex justify-center items-center hover:scale-105 transition-all ${
+                  !project.website || project.website === "-"
+                    ? "opacity-50 pointer-events-none"
+                    : ""
+                }`}
               >
                 Lihat Website
               </a>
 
               <Link
                 to="/portofolio"
-                className="flex-1 sm:flex-none px-6 sm:px-8 py-3 sm:py-3.5 rounded-full border border-red-700 text-red-700 text-sm font-semibold flex justify-center items-center gap-2 hover:bg-red-50 active:scale-95 transition-all"
+                className="flex-1 sm:flex-none px-6 py-3 rounded-full border border-red-700 text-red-700 text-sm font-semibold flex justify-center items-center gap-2 hover:bg-red-50 transition-all"
               >
-                More Project
+                Lihat Proyek Lain
                 <Icon icon="formkit:arrowright" width={16} height={16} />
               </Link>
             </motion.div>
@@ -129,52 +133,44 @@ export default function PortfolioDetailPage() {
 
           {/* RIGHT */}
           <motion.div
-            className="w-full flex justify-center lg:justify-end lg:pl-10"
+            className="w-full flex justify-center lg:justify-end lg:pl-6"
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative inline-flex justify-center">
-              {/* Glow */}
-              <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] lg:w-[700px] lg:h-[700px] rounded-full z-0"
-                style={{
-                  background:
-                    "radial-gradient(ellipse 50% 50% at 50% 50%, rgba(226,29,29,0.5) 0%, rgba(226,29,29,0) 100%)",
-                }}
-              />
-
-              {/* Shadow */}
-              <div
-                className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 w-[80%] h-[70px] z-0"
-                style={{
-                  background:
-                    "radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%)",
-                  filter: "blur(20px)",
-                }}
-              />
-
-              <img
-                src={MockupImage}
-                alt={`${project.title} Mockup`}
-                className="relative w-full max-w-[400px] object-contain z-10"
-              />
-            </div>
+            <LaptopMockup image={project.image} title={project.title} />
           </motion.div>
         </div>
 
-        {/* FULL PREVIEW */}
+        {/* DETAIL IMAGE */}
         <motion.div
-          className="w-full flex justify-center"
+          className="flex flex-col gap-6"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="w-full bg-neutral-50 rounded-[30px] p-4 shadow border">
-            <img
-              src={FullPreviewImage}
-              alt={`${project.title} Full Preview`}
-              className="w-full rounded-[24px]"
-            />
-          </div>
+          {project.details && project.details.length > 0 ? (
+            project.details.map((img, i) => (
+              <div
+                key={i}
+                className="w-full bg-neutral-50 rounded-[30px] p-4 shadow-sm border border-neutral-100"
+              >
+                <img
+                  src={img}
+                  alt={`${project.title} Detail ${i + 1}`}
+                  className="w-full rounded-[20px] object-contain"
+                />
+              </div>
+            ))
+          ) : (
+            <div className="w-full bg-neutral-50 rounded-[30px] p-4 shadow-sm border border-neutral-100">
+              <img
+                src={project.image}
+                alt={`${project.title} Preview`}
+                className="w-full rounded-[20px] object-contain"
+              />
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

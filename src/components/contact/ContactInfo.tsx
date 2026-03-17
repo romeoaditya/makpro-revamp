@@ -7,21 +7,21 @@ export default function ContactInfo() {
       {/* Badge */}
       <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-[50px] mb-6 self-start">
         <span className="text-red-700 text-[10px] font-medium tracking-wider uppercase">
-          GET IN TOUCH
+          HUBUNGI KAMI
         </span>
       </div>
 
       {/* Headline */}
       <h1 className="text-3xl md:text-4xl lg:text-[42px] font-extrabold leading-[1.3] text-black mb-6">
-        Your Vision Starts Here{" "}
-        <span className="text-red-700">Let's Talk!</span>
+        Wujudkan Ide Anda{" "}
+        <span className="text-red-700">Mari Kita Bicarakan!</span>
       </h1>
 
       {/* Description */}
       <p className="text-sm text-black font-normal leading-relaxed mb-10 max-w-md">
-        We're excited to bring your ideas to life. Tell us about your project,
-        and our team will help you craft creative digital solutions that make an
-        impact.
+        Kami siap membantu mewujudkan ide Anda. Ceritakan kebutuhan proyek Anda,
+        dan tim kami akan membantu menciptakan solusi digital kreatif yang
+        berdampak.
       </p>
 
       {/* Contact Info List */}

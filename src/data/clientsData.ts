@@ -118,7 +118,7 @@ export const clientsData: ClientItem[] = [
 
 export const categories = [
   { label: "All", value: "All" },
-  { label: "Government", value: "Government" },
-  { label: "Education", value: "Education" },
-  { label: "Ministry", value: "Ministry" },
+  { label: "Pemerintah", value: "Government" },
+  { label: "Pendidikan", value: "Education" },
+  { label: "Kementerian", value: "Ministry" },
 ];

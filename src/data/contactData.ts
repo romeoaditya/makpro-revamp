@@ -1,7 +1,7 @@
 export const contactInfo = [
   {
     icon: "fluent:call-24-filled",
-    label: "Phone",
+    label: "Telepon",
     value: "021-589 07 647",
   },
   {
@@ -11,20 +11,19 @@ export const contactInfo = [
   },
   {
     icon: "fluent:location-24-filled",
-    label: "Address",
+    label: "Alamat",
     value:
       "Jl. Kostrad Raya No.2 Petukangan Utara, Pesanggrahan Jakarta Selatan.",
   },
   {
     icon: "fluent:clock-24-filled",
-    label: "Business Hours",
-    value: "Monday - Sunday: 08:00 - 20:00 WIB",
+    label: "Jam Operasional",
+    value: "Senin - Minggu: 08:00 - 20:00 WIB",
   },
 ];
 
 export const socialMedia = [
-  { icon: "mdi:facebook", href: "#" },
   { icon: "mdi:instagram", href: "#" },
-  { icon: "mdi:twitter", href: "#" },
   { icon: "mdi:whatsapp", href: "#" },
+  { icon: "mdi:youtube", href: "#" },
 ];

@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Send } from "lucide-react";
-import logo from "../assets/logo-makpro.png";
+import logo from "../assets/logo-hd.png";
 
 const mainMenuLinks = [
-  { label: "About us", to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Contact Us", to: "/contact" },
+  { label: "Tentang Kami", to: "/about" },
+  { label: "Layanan", to: "/services" },
+  { label: "Hubungi Kami", to: "/contact" },
 ];
 
 const supportLinks = [
   { label: "FAQ", to: "/faq" },
-  { label: "Testimonials", to: "/testimonials" },
-  { label: "Terms & Condition", to: "/terms" },
+  { label: "Testimoni", to: "/testimonials" },
+  { label: "Syarat & Ketentuan", to: "/terms" },
 ];
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      alert(`Proposal request sent to: ${email}`);
+      alert(`Permintaan proposal dikirim ke: ${email}`);
       setEmail("");
     }
   };
@@ -33,10 +33,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1 flex flex-col gap-3">
             <div className="flex items-center gap-2 h-[36px]">
-              {/* ✅ Logo diperbesar */}
               <img
                 src={logo}
-                alt="MAK Production Logo"
+                alt="Logo MAK Production"
                 className="w-10 h-10 object-contain"
               />
               <span className="text-base font-semibold">
@@ -45,15 +44,15 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-black font-normal leading-6 max-w-xs">
-              A creative digital agency dedicated to turning ideas into
-              impactful visual experiences.
+              Agensi digital kreatif yang berfokus mengubah ide menjadi
+              pengalaman visual yang berdampak.
             </p>
           </div>
 
           {/* Main Menu */}
           <div className="flex flex-col gap-3">
             <h4 className="text-base font-semibold text-black h-[36px] flex items-center">
-              Main Menu
+              Menu Utama
             </h4>
             <ul className="flex flex-col gap-2.5">
               {mainMenuLinks.map((link) => (
@@ -72,7 +71,7 @@ export default function Footer() {
           {/* Support */}
           <div className="flex flex-col gap-3">
             <h4 className="text-base font-semibold text-black h-[36px] flex items-center">
-              Support
+              Bantuan
             </h4>
             <ul className="flex flex-col gap-2.5">
               {supportLinks.map((link) => (
@@ -91,9 +90,8 @@ export default function Footer() {
           {/* Get Proposal */}
           <div className="flex flex-col gap-3">
             <h4 className="text-base font-semibold text-black h-[36px] flex items-center">
-              Get Proposal
+              Ajukan Proposal
             </h4>
-            {/* ✅ Input & button dalam satu baris, tidak overflow */}
             <form
               onSubmit={handleSend}
               className="flex items-center gap-2 w-full"
@@ -102,7 +100,7 @@ export default function Footer() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                placeholder="Masukkan email Anda"
                 className="min-w-0 flex-1 h-10 px-3 bg-neutral-50 border border-neutral-200 rounded-lg text-sm text-black/70 placeholder:text-black/40 outline-none focus:ring-2 focus:ring-red-300 focus:border-transparent transition-all"
               />
               <button
@@ -110,7 +108,7 @@ export default function Footer() {
                 className="h-10 px-4 bg-red-700 rounded-lg flex items-center gap-1.5 text-white text-sm font-semibold hover:bg-red-800 active:scale-95 transition-all shadow-sm shrink-0"
               >
                 <Send size={13} />
-                Send
+                Kirim
               </button>
             </form>
           </div>
@@ -121,7 +119,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-black text-xs font-normal">
-          © 2025 MAK Production. All Rights Reserved.
+          © 2026 MAK Production. Semua Hak Dilindungi.
         </p>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo-makpro.png";
+import logo from "../assets/logo-hd.png";
 import DesktopNav from "./navbar/DesktopNav";
 import MobileMenu from "./navbar/MobileMenu";
 

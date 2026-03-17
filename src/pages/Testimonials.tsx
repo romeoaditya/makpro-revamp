@@ -99,7 +99,7 @@ export default function TestimonialsPage() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0 }}
           >
             <span className="text-red-700 text-[10px] font-bold tracking-wider uppercase">
-              TESTIMONIALS
+              TESTIMONI
             </span>
           </motion.div>
 
@@ -109,7 +109,7 @@ export default function TestimonialsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
           >
-            What Our Clients <span className="text-red-700">Say's.</span>
+            Apa Kata <span className="text-red-700">Klien Kami.</span>
           </motion.h2>
         </div>
       </div>
@@ -224,7 +224,7 @@ export default function TestimonialsPage() {
             to="/testimonials"
             className="px-8 py-3 rounded-full border border-black/20 text-black text-sm font-medium hover:bg-black hover:text-white transition-all flex items-center gap-2"
           >
-            View All Testimonials <ArrowRight size={16} />
+            Lihat Semua Testimoni <ArrowRight size={16} />
           </Link>
         </div>
       </motion.div>

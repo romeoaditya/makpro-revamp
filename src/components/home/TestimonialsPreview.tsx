@@ -12,11 +12,11 @@ export default function TestimonialsPreview() {
         <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-[50px] mb-4">
             <span className="text-red-700 text-[10px] font-bold tracking-wider uppercase">
-              TESTIMONIALS
+              TESTIMONI
             </span>
           </div>
           <h2 className="text-3xl lg:text-[42px] font-extrabold leading-[1.3] text-black">
-            What Our Clients <span className="text-red-700">Say's.</span>
+            Apa Kata <span className="text-red-700">Klien Kami.</span>
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -81,7 +81,7 @@ export default function TestimonialsPreview() {
             to="/testimonials"
             className="px-8 py-3 rounded-full border border-black/20 text-black text-sm font-medium hover:bg-black hover:text-white transition-all flex items-center gap-2"
           >
-            View All Testimonials <ArrowRight size={16} />
+            Lihat Semua Testimoni <ArrowRight size={16} />
           </Link>
         </div>
       </div>

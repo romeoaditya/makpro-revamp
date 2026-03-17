@@ -14,18 +14,18 @@ export default function PortfolioPreview() {
           <div>
             <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-[50px] mb-4">
               <span className="text-red-700 text-[10px] font-bold tracking-wider uppercase">
-                OUR PROJECTS
+                PROYEK KAMI
               </span>
             </div>
             <h2 className="text-3xl lg:text-[42px] font-extrabold leading-[1.3] text-black">
-              Latest <span className="text-red-700">Projects.</span>
+              Proyek <span className="text-red-700">Terbaru.</span>
             </h2>
           </div>
           <Link
             to="/portofolio"
             className="flex items-center gap-2 text-red-700 text-sm font-semibold hover:gap-3 transition-all"
           >
-            View All Projects <ArrowRight size={16} />
+            Lihat Semua Proyek <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -60,7 +60,7 @@ export default function PortfolioPreview() {
 
                 <div className="flex items-center gap-2 mt-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 delay-75">
                   <span className="text-red-400 text-xs font-semibold">
-                    View Project
+                    Lihat Proyek
                   </span>
                   <ArrowRight size={12} className="text-red-400" />
                 </div>
@@ -74,7 +74,7 @@ export default function PortfolioPreview() {
             to="/portofolio"
             className="px-8 py-3 rounded-full border border-black/20 text-black text-sm font-medium hover:bg-black hover:text-white transition-all flex items-center gap-2"
           >
-            View All Projects <ArrowRight size={16} />
+            Lihat Semua Proyek <ArrowRight size={16} />
           </Link>
         </div>
       </div>

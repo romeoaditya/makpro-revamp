@@ -5,53 +5,53 @@ export interface FAQItem {
 
 export const faqData: FAQItem[] = [
   {
-    question: "Can i install/upload anything i want on there?",
+    question: "Apakah saya bisa menginstall atau upload apa saja di sini?",
     answer:
-      "For now it is limited to 100MB per instance. We'll offer expansion options soon.",
+      "Untuk saat ini dibatasi hingga 100MB per instance. Kami akan segera menyediakan opsi penambahan kapasitas.",
   },
   {
-    question: "How long is this site live?",
+    question: "Berapa lama website ini bisa aktif?",
     answer:
-      "Your site will remain live as long as your subscription is active. We offer monthly and annual plans.",
+      "Website Anda akan tetap aktif selama langganan masih berjalan. Kami menyediakan paket bulanan dan tahunan.",
   },
   {
-    question: "What kind of support do you provide?",
+    question: "Jenis dukungan apa yang tersedia?",
     answer:
-      "We provide 24/7 customer support via email and WhatsApp for all our clients.",
+      "Kami menyediakan dukungan pelanggan 24/7 melalui email dan WhatsApp untuk semua klien.",
   },
   {
-    question: "Can I customize the design of my project?",
+    question: "Apakah saya bisa menyesuaikan desain proyek saya?",
     answer:
-      "Absolutely! We offer full customization based on your brand guidelines and preferences.",
+      "Tentu saja! Kami menyediakan kustomisasi penuh sesuai dengan brand dan kebutuhan Anda.",
   },
   {
-    question: "How do I get started with MAK Production?",
+    question: "Bagaimana cara memulai dengan MAK Production?",
     answer:
-      "Simply contact us through the contact page or WhatsApp, and our team will guide you through the process.",
+      "Cukup hubungi kami melalui halaman kontak atau WhatsApp, dan tim kami akan membantu Anda memulai.",
   },
   {
-    question: "Do you offer revision services?",
+    question: "Apakah ada layanan revisi?",
     answer:
-      "Yes, we include revision rounds in all our packages. The number of revisions depends on the package chosen.",
+      "Ya, kami menyediakan revisi di setiap paket. Jumlah revisi tergantung pada paket yang dipilih.",
   },
   {
-    question: "What is your typical project timeline?",
+    question: "Berapa lama pengerjaan proyek biasanya?",
     answer:
-      "Project timelines vary depending on complexity. A typical website takes 2-4 weeks.",
+      "Waktu pengerjaan tergantung kompleksitas. Umumnya, pembuatan website memakan waktu 2–4 minggu.",
   },
   {
-    question: "Do you provide maintenance after project completion?",
+    question: "Apakah ada layanan maintenance setelah proyek selesai?",
     answer:
-      "Yes, we offer ongoing maintenance packages to keep your project running smoothly after launch.",
+      "Ya, kami menyediakan paket maintenance untuk memastikan proyek Anda tetap berjalan dengan baik setelah selesai.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "Metode pembayaran apa saja yang tersedia?",
     answer:
-      "We accept bank transfers, credit cards, and digital wallets including GoPay and OVO.",
+      "Kami menerima transfer bank, kartu kredit, serta dompet digital seperti GoPay dan OVO.",
   },
   {
-    question: "Do you work with international clients?",
+    question: "Apakah melayani klien dari luar negeri?",
     answer:
-      "Yes, we work with clients worldwide and can accommodate different time zones for meetings.",
+      "Ya, kami melayani klien dari seluruh dunia dan dapat menyesuaikan jadwal meeting sesuai zona waktu.",
   },
 ];
