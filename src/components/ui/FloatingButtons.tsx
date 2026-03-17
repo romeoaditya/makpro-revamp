@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WA_NUMBER = "6281234567890";
+const WA_NUMBER = "6285691507889";
 const WA_MESSAGE = "Halo, saya ingin bertanya tentang layanan MAK Production.";
 
 export default function FloatingButtons() {
