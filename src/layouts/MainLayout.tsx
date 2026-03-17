@@ -1,6 +1,7 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { Outlet } from 'react-router-dom';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Outlet } from "react-router-dom";
+import FloatingButtons from "../components/ui/FloatingButtons";
 
 export default function MainLayout() {
   return (
@@ -17,6 +18,7 @@ export default function MainLayout() {
       </main>
 
       <Footer />
+      <FloatingButtons />
     </div>
   );
 }

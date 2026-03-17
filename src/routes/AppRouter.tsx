@@ -9,6 +9,7 @@ import ClientsPage from "../pages/ClientPage";
 import ContactPage from "../pages/ContactPage";
 import TestimonialsPage from "../pages/Testimonials";
 import FAQPage from "../pages/FAQ";
+import ScrollToTop from "../components/ui/ScrollToTop";
 
 // Placeholder for future pages
 const ComingSoon = ({ page }: { page: string }) => (
@@ -21,6 +22,7 @@ const ComingSoon = ({ page }: { page: string }) => (
 export default function AppRouter() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
