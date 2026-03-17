@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Icon } from "@iconify/react";
 import {
   clientsData,
   categories,
