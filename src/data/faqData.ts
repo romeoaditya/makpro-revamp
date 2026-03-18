@@ -5,53 +5,46 @@ export interface FAQItem {
 
 export const faqData: FAQItem[] = [
   {
-    question: "Apakah saya bisa menginstall atau upload apa saja di sini?",
+    question: "Apa saja layanan utama yang ditawarkan MAK Production?",
     answer:
-      "Untuk saat ini dibatasi hingga 100MB per instance. Kami akan segera menyediakan opsi penambahan kapasitas.",
+      "Kami adalah Digital Agency yang menyediakan solusi kreatif menyeluruh meliputi Photography, Videography, Graphic Design, Motion Graphic, serta pengembangan Teknologi Informasi dan Web Development.",
   },
   {
-    question: "Berapa lama website ini bisa aktif?",
+    question:
+      "Apakah saya bisa menyesuaikan desain proyek saya sesuai keinginan?",
     answer:
-      "Website Anda akan tetap aktif selama langganan masih berjalan. Kami menyediakan paket bulanan dan tahunan.",
+      "Tentu saja. Kami percaya setiap brand memiliki visi unik. Kami menggabungkan kreativitas dan strategi untuk memastikan hasil akhir sesuai dengan kebutuhan dan tujuan spesifik Anda.",
   },
   {
-    question: "Jenis dukungan apa yang tersedia?",
+    question:
+      "Jenis dukungan apa saja yang tersedia selama proyek berlangsung?",
     answer:
-      "Kami menyediakan dukungan pelanggan 24/7 melalui email dan WhatsApp untuk semua klien.",
+      "Kami menyediakan tim profesional yang berkomitmen tinggi untuk menjadi mitra kreatif Anda, mulai dari tahap konsultasi ide hingga eksekusi akhir.",
   },
   {
-    question: "Apakah saya bisa menyesuaikan desain proyek saya?",
+    question: "Bagaimana cara mulai bekerja sama dengan MAK Production?",
     answer:
-      "Tentu saja! Kami menyediakan kustomisasi penuh sesuai dengan brand dan kebutuhan Anda.",
+      "Anda dapat memulai dengan menghubungi tim kami melalui WhatsApp atau email untuk mendiskusikan visi Anda. Sesuai slogan kami, 'Our Talent for Your Dreams', kami siap mewujudkan impian kreatif Anda.",
   },
   {
-    question: "Bagaimana cara memulai dengan MAK Production?",
+    question: "Apakah ada layanan revisi untuk hasil karya visual?",
     answer:
-      "Cukup hubungi kami melalui halaman kontak atau WhatsApp, dan tim kami akan membantu Anda memulai.",
+      "Ya. Kami menjunjung tinggi profesionalisme dan mengutamakan kepuasan pelanggan, sehingga kami menyediakan sesi revisi untuk memastikan setiap detail sesuai dengan ekspektasi Anda.",
   },
   {
-    question: "Apakah ada layanan revisi?",
+    question: "Berapa lama pengerjaan proyek pada umumnya?",
     answer:
-      "Ya, kami menyediakan revisi di setiap paket. Jumlah revisi tergantung pada paket yang dipilih.",
+      "Waktu pengerjaan sangat bervariasi tergantung pada skala dan jenis proyek (misalnya video dokumentasi, motion graphic, atau web). Kami berkomitmen untuk memberikan hasil berkualitas dalam waktu yang disepakati.",
   },
   {
-    question: "Berapa lama pengerjaan proyek biasanya?",
+    question:
+      "Apakah MAK Production melayani klien dari luar kota atau luar negeri?",
     answer:
-      "Waktu pengerjaan tergantung kompleksitas. Umumnya, pembuatan website memakan waktu 2–4 minggu.",
-  },
-  {
-    question: "Apakah ada layanan maintenance setelah proyek selesai?",
-    answer:
-      "Ya, kami menyediakan paket maintenance untuk memastikan proyek Anda tetap berjalan dengan baik setelah selesai.",
+      "Ya. Kami memiliki portofolio luas yang mencakup berbagai instansi tingkat nasional dan siap bekerja sama dengan instansi maupun individu dari mana saja dengan prinsip saling menguntungkan.",
   },
   {
     question: "Metode pembayaran apa saja yang tersedia?",
     answer:
-      "Kami menerima transfer bank, kartu kredit, serta dompet digital seperti GoPay dan OVO.",
-  },
-  {
-    question: "Apakah melayani klien dari luar negeri?",
-    answer:
-      "Ya, kami melayani klien dari seluruh dunia dan dapat menyesuaikan jadwal meeting sesuai zona waktu.",
+      "Kami menyediakan berbagai metode pembayaran formal untuk memastikan legalitas dan kenyamanan transaksi bagi klien korporasi maupun instansi pemerintah.",
   },
 ];

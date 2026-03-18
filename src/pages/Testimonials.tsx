@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { testimonialsData } from "../data/testimonialsData";
 
 const ITEMS_PER_SLIDE = 3;
-const preview = testimonialsData.slice(0, 9);
+const preview = testimonialsData.slice(0, 19);
 const totalSlides = Math.ceil(preview.length / ITEMS_PER_SLIDE);
 const slides = Array.from({ length: totalSlides }, (_, i) =>
   preview.slice(i * ITEMS_PER_SLIDE, i * ITEMS_PER_SLIDE + ITEMS_PER_SLIDE),
@@ -19,6 +17,7 @@ export default function TestimonialsPage() {
   const [slideWidth, setSlideWidth] = useState(0);
   const isPausedRef = useRef(false);
   const activeIndexRef = useRef(0);
+  const isAutoScrollingRef = useRef(false);
 
   useEffect(() => {
     const el = wrapperRef.current;
@@ -34,9 +33,13 @@ export default function TestimonialsPage() {
     if (!el || slideWidth === 0) return;
 
     const slideToIndex = (index: number) => {
+      isAutoScrollingRef.current = true;
       el.scrollTo({ left: index * slideWidth, behavior: "smooth" });
       activeIndexRef.current = index;
       setActiveIndex(index);
+      setTimeout(() => {
+        isAutoScrollingRef.current = false;
+      }, 500);
     };
 
     const interval = setInterval(() => {
@@ -49,6 +52,7 @@ export default function TestimonialsPage() {
     }, 3000);
 
     const handleScroll = () => {
+      if (isAutoScrollingRef.current) return;
       const index = Math.round(el.scrollLeft / slideWidth);
       const clamped = Math.max(0, Math.min(index, totalSlides - 1));
       activeIndexRef.current = clamped;
@@ -82,10 +86,19 @@ export default function TestimonialsPage() {
 
   const goToSlide = (index: number) => {
     const el = scrollRef.current;
-    if (!el) return;
+    if (!el || slideWidth === 0) return;
+
+    isPausedRef.current = true;
+    isAutoScrollingRef.current = true;
+
     el.scrollTo({ left: index * slideWidth, behavior: "smooth" });
     activeIndexRef.current = index;
     setActiveIndex(index);
+
+    setTimeout(() => {
+      isAutoScrollingRef.current = false;
+      isPausedRef.current = false;
+    }, 800);
   };
 
   return (
@@ -217,15 +230,6 @@ export default function TestimonialsPage() {
               }`}
             />
           ))}
-        </div>
-
-        <div className="flex justify-center mt-8">
-          <Link
-            to="/testimonials"
-            className="px-8 py-3 rounded-full border border-black/20 text-black text-sm font-medium hover:bg-black hover:text-white transition-all flex items-center gap-2"
-          >
-            Lihat Semua Testimoni <ArrowRight size={16} />
-          </Link>
         </div>
       </motion.div>
     </section>

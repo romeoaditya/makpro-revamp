@@ -2,7 +2,7 @@ export const contactInfo = [
   {
     icon: "fluent:call-24-filled",
     label: "Telepon",
-    value: "(085) 691-507-889",
+    value: "0856 9150 7889",
   },
   {
     icon: "fluent:mail-24-filled",

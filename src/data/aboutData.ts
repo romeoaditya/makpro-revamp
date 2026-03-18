@@ -18,7 +18,7 @@ export const featuresData = [
 ];
 
 export const contactData = {
-  phone: "(085) 691-507-889",
+  phone: "0856 9150 7889",
   whatsapp: "6285691507889",
 };
 
