@@ -18,8 +18,8 @@ export const featuresData = [
 ];
 
 export const contactData = {
-  phone: "(021) 589-076-47",
-  whatsapp: "6281234567890",
+  phone: "(085) 691-507-889",
+  whatsapp: "6285691507889",
 };
 
 export const visiData =

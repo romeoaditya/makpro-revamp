@@ -282,3 +282,27 @@ export const portfolioData: PortfolioItem[] = [
     details: [Detail19],
   },
 ];
+
+export const monthMap: Record<string, string> = {
+  Jan: "01",
+  Feb: "02",
+  Mar: "03",
+  Apr: "04",
+  Mei: "05",
+  Jun: "06",
+  Jul: "07",
+  Agt: "08",
+  Sep: "09",
+  Okt: "10",
+  Nov: "11",
+  Des: "12",
+};
+
+export const parseDate = (dateStr: string) => {
+  const [day, month, year] = dateStr.split(" ");
+  return new Date(`${year}-${monthMap[month]}-${day.padStart(2, "0")}`);
+};
+
+export const sortedPortfolioData = [...portfolioData].sort(
+  (a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime(),
+);

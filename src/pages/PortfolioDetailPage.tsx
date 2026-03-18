@@ -125,7 +125,7 @@ export default function PortfolioDetailPage() {
                 to="/portofolio"
                 className="flex-1 sm:flex-none px-6 py-3 rounded-full border border-red-700 text-red-700 text-sm font-semibold flex justify-center items-center gap-2 hover:bg-red-50 transition-all"
               >
-                Lihat Proyek Lain
+                Proyek Lain
                 <Icon icon="formkit:arrowright" width={16} height={16} />
               </Link>
             </motion.div>
