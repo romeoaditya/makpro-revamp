@@ -18,7 +18,7 @@ export default function ServiceCard({
     const text = encodeURIComponent(
       `Halo MAK Production, saya tertarik dengan layanan ${service.title}. Bisa minta informasi lebih lanjut?`,
     );
-    window.open(`https://wa.me/6281234567890?text=${text}`, "_blank");
+    window.open(`https://wa.me/6285691507889?text=${text}`, "_blank");
   };
 
   return (

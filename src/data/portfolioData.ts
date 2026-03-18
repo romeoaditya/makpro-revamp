@@ -15,6 +15,8 @@ import Img14 from "../assets/portofolio/14/14.png";
 import Img15 from "../assets/portofolio/15/15.png";
 import Img16 from "../assets/portofolio/16/16.png";
 import Img17 from "../assets/portofolio/17/17.png";
+import Img18 from "../assets/portofolio/18/18.png";
+import Img19 from "../assets/portofolio/19/19.png";
 
 import Detail1 from "../assets/portofolio/1/detail-1.png";
 import Detail2 from "../assets/portofolio/2/detail-2.png";
@@ -33,6 +35,8 @@ import Detail14 from "../assets/portofolio/14/detail-14.png";
 import Detail15 from "../assets/portofolio/15/detail-15.png";
 import Detail16 from "../assets/portofolio/16/detail-16.png";
 import Detail17 from "../assets/portofolio/17/detail-17.png";
+import Detail18 from "../assets/portofolio/18/detail-18.png";
+import Detail19 from "../assets/portofolio/19/detail-19.png";
 
 export interface PortfolioItem {
   id: string;
@@ -251,5 +255,30 @@ export const portfolioData: PortfolioItem[] = [
     website: "-",
     tools: "Adobe Premiere Pro, Adobe After Effects",
     details: [Detail17],
+  },
+  {
+    id: "video-testimoni-2026",
+    title:
+      "Video Testimoni Pejabat, Kepsek, Guru, Orang Tua, dan Peserta Didik",
+    desc: "Karya Kami Bersama Kreasi Nias Selatan x Save The Children",
+    date: "12 Jan 2026",
+    image: Img18,
+    client: "Kreasi Nias Selatan x Save The Children",
+    platform: "Video Dokumentasi",
+    website: "-",
+    tools: "Adobe Premiere Pro, Adobe After Effects",
+    details: [Detail18],
+  },
+  {
+    id: "jma-2026",
+    title: "Jakarta Madrasah Awards 2026",
+    desc: "Karya Kami Bersama Kanwil DKI Jakarta",
+    date: "5 Feb 2026",
+    image: Img19,
+    client: "Kanwil DKI Jakarta",
+    platform: "Video Dokumentasi",
+    website: "-",
+    tools: "Adobe Premiere Pro, Adobe After Effects",
+    details: [Detail19],
   },
 ];

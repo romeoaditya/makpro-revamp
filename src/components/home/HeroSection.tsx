@@ -71,7 +71,7 @@ export default function HeroSection() {
                 to="/portofolio"
                 className="flex-1 sm:flex-none px-6 py-3 rounded-[50px] border border-red-700 text-red-700 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-red-50 hover:scale-105 transition-all duration-200"
               >
-                Lihat Selengkapnya <ArrowRight size={16} />
+                Selengkapnya <ArrowRight size={16} />
               </Link>
             </motion.div>
           </div>

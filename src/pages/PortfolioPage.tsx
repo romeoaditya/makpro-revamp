@@ -3,13 +3,38 @@ import { motion, AnimatePresence } from "framer-motion";
 import { portfolioData } from "../data/portfolioData";
 import PortfolioCard from "../components/portfolio/PortfolioCard";
 
+const monthMap: Record<string, string> = {
+  Jan: "01",
+  Feb: "02",
+  Mar: "03",
+  Apr: "04",
+  Mei: "05",
+  Jun: "06",
+  Jul: "07",
+  Agt: "08",
+  Sep: "09",
+  Okt: "10",
+  Nov: "11",
+  Des: "12",
+};
+
+const parseDate = (dateStr: string) => {
+  const [day, month, year] = dateStr.split(" ");
+  return new Date(`${year}-${monthMap[month]}-${day.padStart(2, "0")}`);
+};
+
+const sortedPortfolio = [...portfolioData].sort(
+  (a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime(),
+);
+
 const INITIAL_SHOW = 6;
 
 export default function PortfolioPage() {
   const [showAll, setShowAll] = useState(false);
+
   const displayedPortfolio = showAll
-    ? portfolioData
-    : portfolioData.slice(0, INITIAL_SHOW);
+    ? sortedPortfolio
+    : sortedPortfolio.slice(0, INITIAL_SHOW);
 
   return (
     <section className="w-full bg-white overflow-hidden py-16 lg:py-24">
